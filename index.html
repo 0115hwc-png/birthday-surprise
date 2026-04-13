@@ -224,6 +224,7 @@
       }
 
       .playlist-grid,
+      .memory-grid,
       .coupon-grid,
       .date-grid {
         display: grid;
@@ -232,6 +233,7 @@
       }
 
       .playlist-card,
+      .memory-card,
       .date-card,
       .coupon-card {
         background: var(--white);
@@ -242,6 +244,7 @@
       }
 
       .playlist-card h3,
+      .memory-card h3,
       .date-card h3,
       .coupon-card h3 {
         margin: 0 0 10px;
@@ -249,6 +252,7 @@
       }
 
       .playlist-card p,
+      .memory-card p,
       .date-card p,
       .coupon-card p {
         margin: 0;
@@ -285,35 +289,25 @@
       }
 
       .coupon-card {
-        position: relative;
-        overflow: hidden;
         min-height: 220px;
       }
 
       .coupon-front,
       .coupon-back {
-        transition: opacity 0.35s ease, transform 0.35s ease;
+        transition: opacity 0.25s ease;
       }
 
       .coupon-back {
-        position: absolute;
-        inset: 20px;
-        opacity: 0;
-        transform: translateY(8px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        display: none;
+        margin-top: 8px;
       }
 
       .coupon-card.revealed .coupon-front {
-        opacity: 0;
-        transform: translateY(-8px);
-        pointer-events: none;
+        display: none;
       }
 
       .coupon-card.revealed .coupon-back {
-        opacity: 1;
-        transform: translateY(0);
+        display: block;
       }
 
       .reveal-btn,
@@ -356,6 +350,7 @@
 
       @media (max-width: 820px) {
         .playlist-grid,
+        .memory-grid,
         .coupon-grid,
         .date-grid {
           grid-template-columns: 1fr;
@@ -410,15 +405,14 @@
       </section>
 
       <section>
-        <h2>🎧 내가 만든 오늘의 시합 응원 플리</h2>
+        <h2>🎧 오늘의 시합 응원 플리</h2>
         <p class="section-desc">
-          네 생각하면서 고른 응원 노래!
         </p>
         <div class="playlist-grid">
           <article class="playlist-card">
             <span class="tag">TRACK 01</span>
-            <h3>오늘의 응원곡</h3>
-            <p>내가 시험 전에 많이 들었던 플리얌</p>
+            <h3>세상을 사랑으로 바라보게 해주는 음악</h3>
+            <p>내가 시험 전에 많이 들은 플리</p>
             <a class="link-btn" href="https://www.youtube.com/watch?v=ocjDC0nF04I" target="_blank" rel="noopener noreferrer">유튜브에서 듣기 ↗</a>
           </article>
         </div>
@@ -519,12 +513,13 @@
         </div>
       </section>
 
+
       <section class="final-box">
         <h2>💌 마지막 한마디</h2>
         <p>
           하루 늦었지만..<br />
-          너를 소중하게 생각하는 마음까지 놓친 건 아니야ㅜㅜ.<br />
-          늦었지만 축하해, 사랑해!
+          너를 소중하게 생각하는 마음까지 놓친 건 아니야.<br />
+          늦었지만 축하해, 보고싶어 !
         </p>
       </section>
 
